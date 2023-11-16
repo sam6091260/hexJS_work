@@ -106,7 +106,7 @@ const initialCardCount = data.length;
 const searchResult = document.querySelector("#search-result");
 searchResult.textContent = `本次搜尋共 ${initialCardCount} 筆資料`;
 
-// 新增 card
+// // 新增 card
 const ticketName = document.querySelector(".ticket-name");
 const imgUrl = document.querySelector(".ticket-img-url");
 const area = document.querySelector(".ticket-area");
@@ -116,19 +116,72 @@ const ticketStar = document.querySelector(".ticket-star");
 const intro = document.querySelector(".ticket-intro");
 const ticketBtn = document.querySelector(".ticket-btn");
 
+// ticketBtn.addEventListener("click", () => {
+//   let ticketObj = {};
+//   ticketObj.name = ticketName.value;
+//   ticketObj.imgUrl = imgUrl.value;
+//   ticketObj.area = area.value;
+//   ticketObj.price = ticketPrice.value;
+//   ticketObj.group = setNum.value;
+//   ticketObj.rate = ticketStar.value;
+//   ticketObj.description = intro.value;
+
+//   data.push(ticketObj);
+//   init();
+
+//   ticketName.value = "";
+//   imgUrl.value = "";
+//   area.value = "";
+//   ticketPrice.value = "";
+//   setNum.value = "";
+//   ticketStar.value = "";
+//   intro.value = "";
+// });
+
+const getInputValue = (element) => {
+  return element.value.trim();
+};
+
+const validateInput = () => {
+  const inputs = [
+    ticketName,
+    imgUrl,
+    area,
+    ticketPrice,
+    setNum,
+    ticketStar,
+    intro,
+  ];
+
+  for (const input of inputs) {
+    if (getInputValue(input) === "") {
+      alert("請填寫所有欄位");
+      return false;
+    }
+  }
+
+  return true;
+};
+
 ticketBtn.addEventListener("click", () => {
-  let ticketObj = {};
-  ticketObj.name = ticketName.value;
-  ticketObj.imgUrl = imgUrl.value;
-  ticketObj.area = area.value;
-  ticketObj.price = ticketPrice.value;
-  ticketObj.group = setNum.value;
-  ticketObj.rate = ticketStar.value;
-  ticketObj.description = intro.value;
+  if (!validateInput()) {
+    return;
+  }
+
+  let ticketObj = {
+    name: getInputValue(ticketName),
+    imgUrl: getInputValue(imgUrl),
+    area: getInputValue(area),
+    price: getInputValue(ticketPrice),
+    group: getInputValue(setNum),
+    rate: getInputValue(ticketStar),
+    description: getInputValue(intro),
+  };
 
   data.push(ticketObj);
   init();
 
+  // 清空输入框
   ticketName.value = "";
   imgUrl.value = "";
   area.value = "";
