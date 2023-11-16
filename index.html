@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="shane" content="Shane lin" />
+    <meta name="robots" content="index,follow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="jPYZB1HyqbyUi216AnRptekJZ8nBNZ2jCptsOUGwrF7U8jqVUtQY+TdJ/nmLhgkIZCFbbK918unFX+ejJ/LeHg=="
+      crossorigin="anonymous"
+      onerror="console.error('Font Awesome failed to load');"
+    />
+
+    <link rel="stylesheet" href="./style/style.css" />
+
+    <title>六角期中作業</title>
+  </head>
+  <body>
+    <div class="panel">
+      <div class="container">
+        <div class="section-left">
+          <img src="./img/main_img.png" alt="main" />
+          <img class="img-logo" src="./img/logo.png" alt="logo" />
+        </div>
+        <div class="section-right">
+          <form action="">
+            <h1 class="title">
+              <span><i class="fas fa-plus-circle"></i></span>新增旅遊套票
+            </h1>
+            <ul class="form-input">
+              <li>
+                <label>套票名稱</label>
+                <input type="text" placeholder="請填寫套票名稱" />
+              </li>
+              <li>
+                <label>圖片網址</label>
+                <input type="text" placeholder="請選擇圖片網址" />
+              </li>
+              <li>
+                <label>景點地區</label>
+                <select id="group" placeholder="請選擇景點地區">
+                  <option value="台北">台北</option>
+                  <option value="台中">台中</option>
+                  <option value="高雄">高雄</option>
+                </select>
+              </li>
+              <li>
+                <label>套票金額</label>
+                <input type="number" />
+              </li>
+              <li>
+                <label>套票組數</label>
+                <input type="number" placeholder="請填寫套票組數" />
+              </li>
+              <li>
+                <label>套票星級</label>
+                <input
+                  type="number"
+                  placeholder="請填寫套票星級"
+                  min="1"
+                  max="10"
+                />
+              </li>
+              <li>
+                <label>套票描述</label>
+                <textarea
+                  name="mytext"
+                  rows="6"
+                  cols="40"
+                  placeholder="請填寫套票描述(限100字)"
+                ></textarea>
+              </li>
+            </ul>
+            <input type="button" value="新增套票" class="ticket-btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <section>
+      <div class="card-group">
+        <div class="search-area">
+          <select id="select-search" class="select-search">
+            <option value="地區搜尋" disabled selected hidden>地區搜尋</option>
+            <option value="">全部地區</option>
+            <option value="台北">台北</option>
+            <option value="台中">台中</option>
+            <option value="高雄">高雄</option>
+          </select>
+          <p id="search-result"></p>
+        </div>
+        <ul class="cards"></ul>
+      </div>
+    </section>
+    <script src="./all.js"></script>
+  </body>
+</html>
