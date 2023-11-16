@@ -33,15 +33,27 @@
             <ul class="form-input">
               <li>
                 <label>套票名稱</label>
-                <input type="text" placeholder="請填寫套票名稱" />
+                <input
+                  type="text"
+                  placeholder="請填寫套票名稱"
+                  class="ticket-name"
+                />
               </li>
               <li>
                 <label>圖片網址</label>
-                <input type="text" placeholder="請選擇圖片網址" />
+                <input
+                  type="text"
+                  placeholder="請選擇圖片網址"
+                  class="ticket-img-url"
+                />
               </li>
               <li>
                 <label>景點地區</label>
-                <select id="group" placeholder="請選擇景點地區">
+                <select
+                  id="group"
+                  placeholder="請選擇景點地區"
+                  class="ticket-area"
+                >
                   <option value="台北">台北</option>
                   <option value="台中">台中</option>
                   <option value="高雄">高雄</option>
@@ -49,17 +61,22 @@
               </li>
               <li>
                 <label>套票金額</label>
-                <input type="number" />
+                <input type="number" class="ticket-price" />
               </li>
               <li>
                 <label>套票組數</label>
-                <input type="number" placeholder="請填寫套票組數" />
+                <input
+                  type="number"
+                  placeholder="請填寫套票組數"
+                  class="ticket-set-num"
+                />
               </li>
               <li>
                 <label>套票星級</label>
                 <input
                   type="number"
                   placeholder="請填寫套票星級"
+                  class="ticket-star"
                   min="1"
                   max="10"
                 />
@@ -71,6 +88,7 @@
                   rows="6"
                   cols="40"
                   placeholder="請填寫套票描述(限100字)"
+                  class="ticket-intro"
                 ></textarea>
               </li>
             </ul>

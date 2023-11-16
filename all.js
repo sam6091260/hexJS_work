@@ -105,3 +105,35 @@ selectElement.addEventListener("change", () => {
 const initialCardCount = data.length;
 const searchResult = document.querySelector("#search-result");
 searchResult.textContent = `本次搜尋共 ${initialCardCount} 筆資料`;
+
+// 新增 card
+const ticketName = document.querySelector(".ticket-name");
+const imgUrl = document.querySelector(".ticket-img-url");
+const area = document.querySelector(".ticket-area");
+const ticketPrice = document.querySelector(".ticket-price");
+const setNum = document.querySelector(".ticket-set-num");
+const ticketStar = document.querySelector(".ticket-star");
+const intro = document.querySelector(".ticket-intro");
+const ticketBtn = document.querySelector(".ticket-btn");
+
+ticketBtn.addEventListener("click", () => {
+  let ticketObj = {};
+  ticketObj.name = ticketName.value;
+  ticketObj.imgUrl = imgUrl.value;
+  ticketObj.area = area.value;
+  ticketObj.price = ticketPrice.value;
+  ticketObj.group = setNum.value;
+  ticketObj.rate = ticketStar.value;
+  ticketObj.description = intro.value;
+
+  data.push(ticketObj);
+  init();
+
+  ticketName.value = "";
+  imgUrl.value = "";
+  area.value = "";
+  ticketPrice.value = "";
+  setNum.value = "";
+  ticketStar.value = "";
+  intro.value = "";
+});
