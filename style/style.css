@@ -107,8 +107,8 @@ section {
 }
 section .search-area {
   display: flex;
-  padding: 56px;
-  align-items: center;
+  padding: 44px;
+  align-items: flex-start;
 }
 section .search-area .select-search {
   width: 27.5%;
@@ -122,6 +122,11 @@ section .search-area .select-search {
 }
 section .search-area p {
   color: #818A91;
+}
+section .search-area .chart {
+  width: 200px;
+  height: 200px;
+  margin-left: auto;
 }
 section .card-group {
   max-width: 1100px;
@@ -259,11 +264,15 @@ section .card-group .card-price span {
   section .search-area {
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
   section .search-area .select-search {
     margin-right: 0;
     margin-bottom: 10px;
     width: 80%;
+  }
+  section .search-area .chart {
+    margin: 0;
   }
   section .card-group .cards .card {
     width: 46%;

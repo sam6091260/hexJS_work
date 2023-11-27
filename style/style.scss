@@ -110,8 +110,9 @@ section {
 
     .search-area {
         display: flex;
-        padding: 56px;
-        align-items: center;
+        padding: 44px;
+        align-items: flex-start;
+
         .select-search {
             width: 27.5%;
             min-height: 38px;
@@ -125,6 +126,12 @@ section {
         p {
             color:#818A91;
         }
+
+        .chart {
+            width: 200px;
+            height: 200px;
+            margin-left: auto;
+        }     
 
     }
 
@@ -290,10 +297,14 @@ section {
         .search-area {
             flex-direction: column;
             justify-content: center;
+            align-items: center;
             .select-search {
                 margin-right: 0;
                 margin-bottom: 10px;
                 width: 80%;
+            }
+            .chart {
+                margin: 0;
             }
           }
     
